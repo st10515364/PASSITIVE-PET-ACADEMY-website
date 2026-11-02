@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account - Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
         <p>Join Pawsitive Pet Academy today.</p>
 
 
-        <form action="#" method="post">
+        <form id="registerForm" action="#" method="post">
 
             <p>
                 <label for="fullname">
@@ -40,6 +41,7 @@
                     name="fullname"
                     required
                 >
+                <span id="nameError" class="error-text">Full name must be at least 3 characters.</span>
             </p>
 
 
@@ -56,6 +58,7 @@
                     name="email"
                     required
                 >
+                <span id="emailError" class="error-text">Please enter a valid email address.</span>
             </p>
 
 
@@ -87,11 +90,12 @@
                     name="password"
                     required
                 >
+                <span id="passError" class="error-text">Password must be at least 6 characters.</span>
             </p>
 
 
             <p>
-                <label for="confirmPassword">
+                <label for="confirm">
                     Confirm Password
                 </label>
 
@@ -99,10 +103,11 @@
 
                 <input
                     type="password"
-                    id="confirmPassword"
-                    name="confirmPassword"
+                    id="confirm"
+                    name="confirm"
                     required
                 >
+                <span id="confirmError" class="error-text">Passwords do not match.</span>
             </p>
 
 
@@ -127,5 +132,9 @@
     <hr>
     <p>&copy; 2026 Pawsitive Pet Academy</p>
 </footer>
+<script src="script.js"></script>
+
 </body>
 </html>
+
+

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -21,12 +22,12 @@
     <section>
 
         <h2>Welcome Back</h2>
-        <img src="Images\Black and White Illustrative Pet Shop Logo.png" width="400"
+        <img src="Images/Black and White Illustrative Pet Shop Logo.png" width="400"
      height="300">
 
         <p>Login to continue your learning journey.</p>
 
-        <form action="#" method="post">
+        <form id="loginForm" action="#" method="post">
 
             <p>
                 <label for="email">Email Address</label>
@@ -38,6 +39,7 @@
                     name="email"
                     required
                 >
+                <span id="emailError" class="error-text">Please enter a valid email address.</span>
             </p>
 
 
@@ -51,6 +53,7 @@
                     name="password"
                     required
                 >
+                <span id="passwordError" class="error-text">Password must be at least 6 characters.</span>
             </p>
 
 
@@ -59,9 +62,8 @@
             </p>
 
 
-            <button type="button"
-              onclick="window.location.href='dashboard.html'">
-                Login  
+            <button type="submit">
+                Login
             </button>
 
         </form>
@@ -83,6 +85,8 @@
     <hr>
     <p>&copy; 2026 Pawsitive Pet Academy</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
+
+

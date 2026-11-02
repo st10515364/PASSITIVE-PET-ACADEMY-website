@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send an Inquiry - Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -35,12 +36,12 @@
     </section>
 
 
-    <form action="#" method="post">
+    <form id="inquiryForm" action="#" method="post">
 
         <!-- Name -->
         <section>
 
-            <label for="name">
+            <label for="inqName">
                 Full Name
             </label>
 
@@ -48,10 +49,11 @@
 
             <input
                 type="text"
-                id="name"
-                name="name"
+                id="inqName"
+                name="inqName"
                 required
             >
+            <span id="inqNameError" class="error-text">Name must be at least 3 characters.</span>
 
         </section>
 
@@ -62,7 +64,7 @@
         <!-- Email -->
         <section>
 
-            <label for="email">
+            <label for="inqEmail">
                 Email Address
             </label>
 
@@ -70,10 +72,11 @@
 
             <input
                 type="email"
-                id="email"
-                name="email"
+                id="inqEmail"
+                name="inqEmail"
                 required
             >
+            <span id="inqEmailError" class="error-text">Please enter a valid email address.</span>
 
         </section>
 
@@ -140,18 +143,19 @@
         <!-- Message -->
         <section>
 
-            <label for="message">
+            <label for="inqMessage">
                 Send a Message
             </label>
 
             <br>
 
             <textarea
-                id="message"
-                name="message"
+                id="inqMessage"
+                name="inqMessage"
                 rows="8"
                 cols="45"
             ></textarea>
+            <span id="inqMsgError" class="error-text">Message must be at least 10 characters long.</span>
 
         </section>
 
@@ -162,6 +166,7 @@
         <button type="submit">
             Send Inquiry
         </button>
+        <div id="inquirySuccess" class="success-box">Your inquiry has been sent successfully.</div>
 
     </form>
 
@@ -177,5 +182,8 @@
     </p>
 
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
+
+

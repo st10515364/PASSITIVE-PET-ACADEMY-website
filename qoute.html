@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get an Instant Quote - Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -35,127 +36,48 @@
     </section>
 
 
-    <form action="#" method="post">
+    <form id="quoteForm" action="#" method="post">
 
-        <!-- Pet Type -->
         <section>
-
-            <h3>Choose Your Animal</h3>
+            <h3>Choose courses</h3>
 
             <label>
-                <input
-                    type="radio"
-                    name="animal"
-                    value="dog"
-                >
-                Dog
+                <input type="checkbox" name="course" value="2500">
+                Dog Training Basics - R2500.00
             </label>
-
             <br>
 
             <label>
-                <input
-                    type="radio"
-                    name="animal"
-                    value="cat"
-                >
-                Cat
+                <input type="checkbox" name="course" value="1800">
+                Pet First Aid - R1800.00
             </label>
-
             <br>
 
             <label>
-                <input
-                    type="radio"
-                    name="animal"
-                    value="other"
-                >
-                Other
+                <input type="checkbox" name="course" value="2200">
+                Animal Behaviour - R2200.00
             </label>
+            <br>
 
+            <label>
+                <input type="checkbox" name="course" value="1900">
+                Puppy Training - R1900.00
+            </label>
         </section>
 
-
-        <!-- Service -->
         <section>
-
-            <h3>Choose Service</h3>
-
-            <select name="service">
-
-                <option>
-                    Dog Training Basics
-                </option>
-
-                <option>
-                    Pet First Aid
-                </option>
-
-                <option>
-                    Animal Behaviour
-                </option>
-
-                <option>
-                    Puppy Training
-                </option>
-
-            </select>
-
+            <h3>Quote Summary</h3>
+            <p>Subtotal: <strong id="subtotal">R0.00</strong></p>
+            <p>Discount: <strong id="discount">-R0.00 (0%)</strong></p>
+            <p>Total: <strong id="total">R0.00</strong></p>
+            <p id="note">Select at least one course to see your quote.</p>
         </section>
 
-
-        <!-- Date -->
-        <section>
-
-            <h3>Preferred Date</h3>
-
-            <input
-                type="date"
-                name="date"
-            >
-
-        </section>
-
-
-        <!-- Additional Information -->
-        <section>
-
-            <h3>Additional Information</h3>
-
-            <textarea
-                name="information"
-                rows="6"
-                cols="40"
-            ></textarea>
-
-        </section>
-
-
-        <br>
-
-        <button type="submit">
-            Get Quote
+        <button id="requestBtn" type="button">
+            Request Quote
         </button>
-
+        <div id="quoteSuccess" class="success-box">Your quote request was sent successfully.</div>
     </form>
-
-
-    <!-- Quote Result -->
-    <section>
-
-        <h2>Example Quote</h2>
-
-        <p>
-            Selected Service:
-            Dog Training Basics
-        </p>
-
-        <p>
-            Estimated Price:
-            R350
-        </p>
-
-    </section>
 
 </main>
 
@@ -169,6 +91,8 @@
     </p>
 
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
+
+
